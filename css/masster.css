@@ -1,0 +1,554 @@
+:root {
+  --bg-gray: #f7f7f7;
+  --text-gray: #748182;
+  --transition-time: 600ms;
+}
+html {
+  scroll-padding-top: 63px;
+}
+/* !#######font family */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  font-family: "Montserrat", sans-serif;
+}
+p,
+span {
+  font-family: "Poppins", sans-serif;
+}
+
+/* ^########## spacial utilities */
+.w-fit {
+  width: fit-content;
+}
+.isolition {
+  isolation: isolate;
+}
+.button-bg {
+  background-color: black;
+  color: white;
+}
+/* !#########start nav bar */
+.navbar {
+  /* background-color: transparent !important; */
+  padding: 10px;
+  background-color: white;
+  z-index: 999;
+}
+nav .navbar-brand {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+}
+.navbar .navbar-nav .nav-link {
+  font-size: 14px;
+  font-weight: 500;
+}
+nav .nav-item .nav-link::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2.5px;
+  background-color: black;
+  left: 8px;
+  bottom: 8px;
+  color: black !important;
+}
+
+nav .nav-item .nav-link.active::before {
+  content: "";
+  position: absolute;
+  width: 75%;
+  height: 2.5px;
+  background-color: black;
+  left: 8px;
+  bottom: 8px;
+  color: black !important;
+  transition: var(--transition-time);
+}
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+/* !#########end nav bar */
+/* &########## start header section */
+
+.header .title h5 {
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.header .title .m-span {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 44px;
+  font-weight: 200;
+}
+span {
+  font-family: "Roboto Mono", monospace;
+  font-size: 44px;
+  font-weight: 200;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.header .span span:nth-of-type(2) {
+  animation: typing-1 15s infinite;
+}
+.header .span span:nth-of-type(3) {
+  animation: typing-2 15s infinite;
+}
+.header .span span:nth-of-type(4) {
+  animation: typing-3 15s infinite;
+}
+
+@keyframes typing-1 {
+  0%,
+  10%,
+  20%,
+  40%,
+  50%,
+  60%,
+  70%,
+  80%,
+  90%,
+  100% {
+    width: 0%;
+  }
+  30% {
+    width: calc(12 * 26.4px);
+  }
+}
+@keyframes typing-2 {
+  0%,
+  10%,
+  20%,
+  30%,
+  40%,
+  50%,
+  70%,
+  80%,
+  90%,
+  100% {
+    width: 0%;
+  }
+  60% {
+    width: calc(9 * 26.4px);
+  }
+}
+@keyframes typing-3 {
+  0%,
+  10%,
+  20%,
+  30%,
+  40%,
+  50%,
+  60%,
+  70%,
+  80%,
+  100% {
+    width: 0%;
+  }
+  90% {
+    width: calc(8 * 26.4px);
+  }
+}
+
+.header .title .s-icon .icon {
+  font-size: 14px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/* &########## end header section */
+/* ^########## start about section */
+.about .image::before {
+  content: "";
+  position: absolute;
+  background-image: url(../image/dots.png);
+  width: 82%;
+  height: 88%;
+  bottom: -35px;
+  left: -19px;
+  z-index: -1;
+}
+
+.about .text-about h2 {
+  font-size: 30px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.about .text-about .p-f {
+  font-size: 14px;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.about .text-about .p-s {
+  line-height: 1.6;
+  margin: 0;
+  font-size: 15px;
+  color: var(--text-gray);
+}
+
+.about .text-about .progress {
+  height: 24px;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+  font-size: 13px;
+}
+
+.about .text-about .progress .bar-1::before {
+  content: "95%";
+  position: absolute;
+  right: 20px;
+}
+.about .text-about .progress .bar-2::before {
+  content: "80%";
+  position: absolute;
+  right: 20px;
+}
+.about .text-about .progress .bar-3::before {
+  content: "90%";
+  position: absolute;
+  right: 20px;
+}
+.about .text-about .button .btn {
+  padding: 10px 30px;
+  font-size: 14px;
+}
+.about .text-about .button .btn-1:hover {
+  background-color: white !important;
+  border: 1px solid black;
+  color: black !important;
+  transition: var(--transition-time);
+}
+.about .text-about .button .btn-2:hover {
+  background-color: black !important;
+  border: none;
+  color: white !important;
+  transition: var(--transition-time);
+}
+/* ^########## end about section */
+/* *########## start servises section */
+.services {
+  background-color: var(--bg-gray);
+  padding-top: 100px;
+  padding-bottom: 70px;
+}
+.title-section h3 {
+  font-size: 40px;
+  font-weight: 900;
+}
+.title-section ::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-image: url(../image/dots.png);
+  left: 50%;
+  transform: translatex(-50%);
+  bottom: 50px;
+}
+.services .container .card {
+  border: 0px !important;
+  padding: 50px 20px 30px;
+  box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+}
+.services .container .card h3 {
+  font-size: 18px;
+  font-weight: 800;
+}
+.services .container .card p {
+  font-size: 14px;
+}
+.services .container .card .icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: var(--bg-gray);
+}
+.services .container .card:hover .icon {
+  background-color: black;
+  color: white;
+  transition: 500ms;
+}
+.services .container .card p {
+  word-spacing: 2px;
+  font-size: 14px;
+  color: var(--text-gray);
+}
+/* *########## end servises section */
+/* ~########## start portfolio section */
+.portfolio .nav-section .list .link a {
+  scroll-padding: 65px;
+}
+.portfolio .list .link::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: black;
+  bottom: -5px;
+}
+.portfolio .list .link:focus::before,
+.portfolio .list .link:active::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  bottom: -5px;
+  transition: var(--transition-time);
+}
+
+body:has(#all:target) .all-link::before,
+body:has(#brand:target) .brand-link::before,
+body:has(#design:target) .des-link::before,
+body:has(#grapgic:target) .gra-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  bottom: -5px;
+  transition: var(--transition-time);
+}
+
+.portfolio .image-box .card-overlay {
+  width: 97%;
+  height: 96%;
+  top: 15px;
+  background: rgba(255, 255, 255, 0.95);
+  left: 6px;
+  transition: top var(--transition-time), opacity var(--transition-time);
+  opacity: 0;
+}
+.portfolio .image-box .card-overlay .text {
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+.portfolio .image-box .card-overlay .icon a {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: black;
+  color: #eee !important;
+  font-size: 13px;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: transform var(--transition-time), opacity var(--transition-time);
+}
+.portfolio .image-box .card-overlay .icon a:hover {
+  background-color: white !important;
+  color: black !important;
+  border: 1px solid black;
+}
+.portfolio .image:hover .card-overlay {
+  top: 6px;
+  opacity: 1;
+  transition: var(--transition-time);
+}
+.portfolio .image:hover .card-overlay .icon a {
+  transform: translateY(0px);
+  opacity: 1;
+}
+/* ~########## end portfolio section */
+/* !########## start Testimonials section */
+.tastimonials {
+  background-color: var(--bg-gray);
+}
+.carousel-inner {
+  width: 80%;
+  margin: 0 auto;
+}
+.carousel-item .image {
+  width: 100px;
+  margin: 0 auto;
+}
+
+.carousel-item .caption .frist-p {
+  white-space: 2px;
+  line-height: 1.6;
+  color: var(--text-gray);
+  font-size: 15px;
+}
+.carousel-item .caption h6 {
+  font-weight: 600;
+  margin: 30px 0px 5px;
+}
+.carousel-item .caption .second-p {
+  font-size: 12px;
+  color: #888;
+  font-weight: 600;
+}
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 5px 7px;
+  bottom: -50px;
+  background-color: #869791;
+}
+
+.carousel-indicators {
+  bottom: -25px !important;
+}
+/* !########## end Testimonials section */
+/* *########## start number section */
+.number {
+  padding: 100px 0 70px;
+}
+.number .box-num h3 {
+  font-size: 30px;
+  font-weight: 900;
+}
+.number .box-num p {
+  line-height: 1.6;
+  font-weight: 600;
+  font-size: 15px;
+  color: #748182;
+}
+/* *########## end number section */
+/* ^########## start team section */
+.team {
+  background-color: var(--bg-gray);
+  padding-block: 100px;
+}
+.team .card {
+  background-color: rgba(52, 52, 52, 0.8);
+  border: none !important;
+  border-radius: 9px;
+}
+.team .card .social-icon {
+  width: 65%;
+  height: 65%;
+  top: 70px;
+  background: rgba(255, 255, 255, 0.95);
+  left: 60px;
+  opacity: 0;
+  transition: 1s;
+}
+
+.team .card .social-icon .icon a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: black;
+  transform: rotateY(180deg);
+}
+.team .card .social-icon .icon a:hover {
+  background-color: white;
+  border: 1px solid black;
+}
+.team .card .social-icon .icon:hover a {
+  color: black !important;
+}
+.team .card .caption {
+  padding: 25px 0 20px;
+}
+.team .card .caption h5 {
+  font-size: 20px;
+}
+.team .card .caption h4 {
+  font-size: 25px;
+}
+.team .card .image img {
+  transition: transform var(--transition-time);
+}
+
+.team .card .image:hover img {
+  transform: scale(1.2);
+}
+.team .card:hover .social-icon {
+  transform: rotateY(180deg);
+  width: 96%;
+  height: 96%;
+  top: 9px;
+  background: rgba(255, 255, 255, 0.95);
+  left: 7px;
+  opacity: 1;
+}
+/* ^########## endteam section */
+/* &########## start Contact section */
+.contact {
+  padding: 100px 0 70px;
+}
+.contact .box .icon {
+  font-size: 25px;
+  margin-bottom: 15px;
+  line-height: 60px;
+  background: #f4f4f4;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.contact .box .icon:hover {
+  background: black;
+  color: white;
+}
+.contact .box .text p {
+  line-height: 1.6;
+  font-size: 15px;
+  color: #748182;
+}
+.contact .row {
+  width: 85%;
+}
+.contact .row .input input {
+  height: 40px;
+  outline: none;
+  border: none;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  padding: 10px;
+}
+.contact .row textarea {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+  padding: 10px;
+  height: 160px;
+  max-height: 160px;
+}
+.contact .row .input input:focus {
+  background-color: #e8f0fe;
+}
+.contact .row .sub {
+  padding: 9px 42px;
+  border: none;
+  font-size: 15px;
+  border: 1px solid black !important;
+}
+.contact .row textarea:focus {
+  background-color: #e8f0fe;
+}
+.contact .row .sub:hover {
+  background-color: white !important;
+  color: black !important;
+  transition: var(--transition-time);
+}
+/* &########## end Contact section */
+/* &########## start footer section */
+.footer {
+  background-color: #1c1c1c;
+  padding: 30px;
+}
+.footer p {
+  font-size: 13px;
+  word-spacing: 2px;
+  color: #748182;
+}
+/* &########## end footer section */
